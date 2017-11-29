@@ -1,0 +1,12 @@
+ create table member( userID varchar(50) not null, userPassword varchar(100) not null,
+userName varchar(30) not null,
+ userYear int not null,
+userMonth int not null,
+userDay int not null,
+userGender varchar(30) not null,
+userEmail varchar(100) not null,
+userAddress varchar(1000) not null,
+userPostCode int not null,
+userDetailAddress varchar(1000) not null,
+userPhoneNumber int not null,
+primary key(userID));

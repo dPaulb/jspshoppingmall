@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+
+
+
+
+
+    <!--servlet mapping with servlet class-->
+    <servlet>
+        <servlet-name>idCheckServlet</servlet-name>
+        <servlet-class>shoppingmall.Servlet.idCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>idCheckServlet</servlet-name>
+        <url-pattern>/join/idcheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>passwordCheck</servlet-name>
+        <servlet-class>shoppingmall.Servlet.passwordCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>passwordCheck</servlet-name>
+        <url-pattern>/join/passwordcheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>joinAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.joinAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>joinAction</servlet-name>
+        <url-pattern>/join/joinAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>loginAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.login.loginAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginAction</servlet-name>
+        <url-pattern>/loginAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logoutAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.login.logoutAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutAction</servlet-name>
+        <url-pattern>/logoutAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminLoginAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.login.adminLoginAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLoginAction</servlet-name>
+        <url-pattern>/admin/adminLoginAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminLogoutAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.login.adminLogoutAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLogoutAction</servlet-name>
+        <url-pattern>/admin/adminLogoutAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>uploadItemAction</servlet-name>
+        <servlet-class>shoppingmall.Servlet.admin.ajaxSummernoteImageUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadItemAction</servlet-name>
+        <url-pattern>/admin/uploadItemAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>uploadItem</servlet-name>
+        <servlet-class>shoppingmall.Servlet.admin.uploadItem</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <multipart-config>
+            <max-file-size>20848820000</max-file-size>
+            <max-request-size>41801884100</max-request-size>
+            <file-size-threshold>1048576000</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadItem</servlet-name>
+        <url-pattern>/admin/uploadItemDo</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+    <!--url mapping with jsp-->
+
+    <servlet>
+        <servlet-name>indexPage</servlet-name>
+        <jsp-file>/home.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>indexPage</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>joinPage</servlet-name>
+        <jsp-file>/join/joinPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>joinPage</servlet-name>
+        <url-pattern>/joinpage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminLoginPage</servlet-name>
+        <jsp-file>/admin/adminLoginPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLoginPage</servlet-name>
+        <url-pattern>/admin/loginPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminPage</servlet-name>
+        <jsp-file>/admin/adminPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminPage</servlet-name>
+        <url-pattern>/admin/adminPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminUploadItem</servlet-name>
+        <jsp-file>/admin/uploadItem.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminUploadItem</servlet-name>
+        <url-pattern>/admin/uploadItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminItemList</servlet-name>
+        <jsp-file>/admin/itemList.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminItemList</servlet-name>
+        <url-pattern>/admin/itemList</url-pattern>
+    </servlet-mapping>
+
+</web-app>

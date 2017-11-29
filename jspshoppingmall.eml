@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_5" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<lib name="Maven: javax.servlet:jsp-api:2.0" scope="PROVIDED"/>
+	<lib name="Maven: javax.servlet:servlet-api:2.4" scope="PROVIDED"/>
+	<lib name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:unknown" scope="PROVIDED"/>
+	<levels>
+		<level name="Maven: javax.servlet:jsp-api:2.0" value="project"/>
+		<level name="Maven: javax.servlet:servlet-api:2.4" value="project"/>
+		<level name="Maven: javax.servlet:jstl:1.2" value="project"/>
+		<level name="Maven: commons-fileupload:commons-fileupload:1.3.3" value="project"/>
+		<level name="Maven: commons-io:commons-io:2.2" value="project"/>
+		<level name="Maven: org.eclipse.jetty:jetty-servlets:9.4.6.v20170531" value="project"/>
+		<level name="Maven: org.eclipse.jetty:jetty-continuation:9.4.6.v20170531" value="project"/>
+		<level name="Maven: org.eclipse.jetty:jetty-http:9.4.6.v20170531" value="project"/>
+		<level name="Maven: org.eclipse.jetty:jetty-util:9.4.6.v20170531" value="project"/>
+		<level name="Maven: org.eclipse.jetty:jetty-io:9.4.6.v20170531" value="project"/>
+		<level name="Maven: org.apache.struts:struts2-core:2.3.16.3" value="project"/>
+		<level name="Maven: org.apache.struts.xwork:xwork-core:2.3.16.3" value="project"/>
+		<level name="Maven: org.apache.commons:commons-lang3:3.1" value="project"/>
+		<level name="Maven: asm:asm:3.3" value="project"/>
+		<level name="Maven: asm:asm-commons:3.3" value="project"/>
+		<level name="Maven: asm:asm-tree:3.3" value="project"/>
+		<level name="Maven: org.freemarker:freemarker:2.3.19" value="project"/>
+		<level name="Maven: ognl:ognl:3.0.6" value="project"/>
+		<level name="Maven: javassist:javassist:3.11.0.GA" value="project"/>
+		<level name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:unknown" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-catalina:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-servlet-api:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-jsp-api:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-el-api:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-juli:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-api:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-jni:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-coyote:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-util:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-util-scan:9.0.1" value="project"/>
+		<level name="Maven: org.apache.tomcat:tomcat-jaspic-api:9.0.1" value="project"/>
+		<level name="Maven: org.json:json:20160810" value="project"/>
+		<level name="Maven: mysql:mysql-connector-java:5.1.38" value="project"/>
+		<level name="Maven: servlets.com:cos:05Nov2002" value="project"/>
+		<level name="Maven: com.googlecode.json-simple:json-simple:1.1" value="project"/>
+	</levels>
+</component>
