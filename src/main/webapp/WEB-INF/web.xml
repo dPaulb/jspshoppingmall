@@ -120,6 +120,24 @@
         <url-pattern>/admin/uploadItemDo</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>cart</servlet-name>
+        <servlet-class>shoppingmall.Servlet.cart.cart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cart</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>deleteCart</servlet-name>
+        <servlet-class>shoppingmall.Servlet.cart.deleteCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCart</servlet-name>
+        <url-pattern>/deletecart</url-pattern>
+    </servlet-mapping>
 
 
 
@@ -180,6 +198,43 @@
     <servlet-mapping>
         <servlet-name>adminItemList</servlet-name>
         <url-pattern>/admin/itemList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>shoppingItemList</servlet-name>
+        <jsp-file>/shopping/shoppingItemList.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>shoppingItemList</servlet-name>
+        <url-pattern>/shopItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>shoppingItemDetail</servlet-name>
+        <jsp-file>/shopping/shoppingItemDetail.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>shoppingItemDetail</servlet-name>
+        <url-pattern>/shopItem/detail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cartTable</servlet-name>
+        <jsp-file>/shopping/cart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cartTable</servlet-name>
+        <url-pattern>/shopItem/cart</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>payment</servlet-name>
+        <jsp-file>/shopping/paymentPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>payment</servlet-name>
+        <url-pattern>/payment</url-pattern>
     </servlet-mapping>
 
 </web-app>

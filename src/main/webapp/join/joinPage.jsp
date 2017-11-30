@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>회원가입</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -51,16 +52,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">신발<span class="sr-only">(current)</span></a>
+                        <a href="/shopItem?itemCategory=shoes">신발<span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="#">상의</a>
+                        <a href="/shopItem?itemCategory=top">상의</a>
                     </li>
                     <li>
-                        <a href="#">하의</a>
+                        <a href="/shopItem?itemCategory=bottom">하의</a>
                     </li>
                     <li>
-                        <a href="#">아우터</a>
+                        <a href="/shopItem?itemCategory=outer">아우터</a>
+                    </li>
+                    <li>
+                        <a href="/shopItem/cart">장바구니</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -90,6 +94,8 @@
                         <ul class="dropdown-menu">
                             <%
                                 if (loginSessionID != null) {
+
+
                             %>
                             <li><a href="/accountPage">계정관리</a></li>
                             <li><a href="/logoutAction">로그아웃</a></li>

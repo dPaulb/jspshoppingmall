@@ -28,7 +28,7 @@ public class ItemDAO {
         try {
             pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, itemDTO.getItemName());
-            pstmt.setString(2, itemDTO.getItemPrice());
+            pstmt.setInt(2, itemDTO.getItemPrice());
             pstmt.setString(3, itemDTO.getUploadDate());
             pstmt.setString(4, itemDTO.getItemCategory());
             pstmt.setString(5, itemDTO.getItemDescription());
@@ -52,10 +52,11 @@ public class ItemDAO {
                 ItemDTO itemDTO = new ItemDTO();
                 itemDTO.setItemNumber(rs.getInt("itemNumber"));
                 itemDTO.setItemName(rs.getString("itemName"));
-                itemDTO.setItemPrice(rs.getString("itemPrice"));
+                itemDTO.setItemPrice(rs.getInt("itemPrice"));
                 itemDTO.setUploadDate(rs.getString("uploadDate"));
                 itemDTO.setItemCategory(rs.getString("itemCategory"));
                 itemDTO.setItemDescription(rs.getString("itemDescription"));
+                itemDTO.setItemThumbnail(rs.getString("itemThumbnail"));
                 itemList.add(itemDTO);
 
             }
@@ -63,5 +64,29 @@ public class ItemDAO {
             e.printStackTrace();
         }
         return itemList;
+    }
+
+    public ItemDTO getItemDetail(int itemNumber){
+        String SQL = "SELECT * FROM item WHERE itemNumber = ?";
+        try{
+            pstmt = conn.prepareStatement(SQL);
+            pstmt.setInt(1, itemNumber);
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                ItemDTO itemDTO = new ItemDTO();
+                itemDTO.setItemNumber(rs.getInt("itemNumber"));
+                itemDTO.setItemName(rs.getString("itemName"));
+                itemDTO.setItemPrice(rs.getInt("itemPrice"));
+                itemDTO.setItemThumbnail(rs.getString("itemThumbnail"));
+                itemDTO.setItemDescription(rs.getString("itemDescription"));
+                itemDTO.setUploadDate(rs.getString("uploadDate"));
+                itemDTO.setItemCategory(rs.getString("itemCategory"));
+                return itemDTO;
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }

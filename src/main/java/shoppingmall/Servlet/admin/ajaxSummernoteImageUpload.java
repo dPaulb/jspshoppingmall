@@ -40,7 +40,7 @@ public class ajaxSummernoteImageUpload extends HttpServlet {
         // 생성된 경로를 JSON 형식으로 보내주기 위한 설정
         JSONObject jobj = new JSONObject();
         jobj.put("url", "/upload/" + fileName);
-        out.print("http://127.0.0.1:8080/upload/" + fileName);
+        out.print("/upload/" + fileName);
 //        System.out.println(application.getRealPath("/") + fileName);
         System.out.println(jobj.toJSONString());
 

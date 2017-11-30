@@ -5,7 +5,7 @@ import java.sql.Date;
 public class ItemDTO {
     private int itemNumber;
     private String itemName;
-    private String itemPrice;
+    private int itemPrice;
     private String uploadDate;
     private String itemCategory;
     private String itemDescription;
@@ -28,11 +28,11 @@ public class ItemDTO {
         this.itemName = itemName;
     }
 
-    public String getItemPrice() {
+    public int getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(String itemPrice) {
+    public void setItemPrice(int itemPrice) {
         this.itemPrice = itemPrice;
     }
 

@@ -27,8 +27,6 @@ public class uploadItem extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
 
-
-
         String uploadPath = request.getSession().getServletContext().getRealPath("/upload");
         System.out.println(uploadPath);
         int size = 100 * 1024 * 1024;  // 업로드 사이즈 제한 10M 이하
@@ -39,9 +37,9 @@ public class uploadItem extends HttpServlet {
             // 파일업로드 및 업로드 후 파일명 가져옴
             MultipartRequest multi = new MultipartRequest(request, uploadPath, size, "utf-8", new DefaultFileRenamePolicy());
             itemCategory = multi.getParameter("itemCategory");
-             itemName = multi.getParameter("itemName");
-             itemPrice = multi.getParameter("itemPrice");
-             itemDescription = multi.getParameter("itemDescription");
+            itemName = multi.getParameter("itemName");
+            itemPrice = multi.getParameter("itemPrice");
+            itemDescription = multi.getParameter("itemDescription");
 
             Enumeration files = multi.getFileNames();
             String file = (String) files.nextElement();
@@ -55,16 +53,10 @@ public class uploadItem extends HttpServlet {
         SimpleDateFormat uploadDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
 
-
-
-
-
-
-
         ItemDTO itemDTO = new ItemDTO();
         itemDTO.setItemCategory(itemCategory);
         itemDTO.setItemName(itemName);
-        itemDTO.setItemPrice(itemPrice);
+        itemDTO.setItemPrice(Integer.parseInt(itemPrice));
         itemDTO.setItemDescription(itemDescription);
         itemDTO.setUploadDate(uploadDate.format(new Date()));
         itemDTO.setItemThumbnail(itemThumbnail);
